@@ -1,0 +1,18 @@
+git init -> starta repositorio
+
+git status -> ver o status do rep / modificações 
+
+git add "arquivo_escolhido" -> add o arquivo  que pedir 
+
+git add . -> todos os arquivos do rep
+
+git commit -m "" -> definir a mensagem "m" da versao / commit 
+
+git push -> subir pro endereço definido 
+
+git remote add origin -> definir o repositorio salvo no Github 
+
+git push --set-upstream origin master -> subir pra branch MASTER
+
+
+
