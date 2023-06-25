@@ -1,3 +1,5 @@
+clear -> limpa a janela 
+
 git init -> starta repositorio
 
 git status -> ver o status do rep / modificações 
@@ -16,4 +18,71 @@ git push --set-upstream origin master -> subir pra branch MASTER
 
 git reflog -> historico de modificações 
 
+git reset --hard (ID) -> voltar um commit especifico na maquina local 
+
+git branch -> mostrar as branch disponiveis
+
+git branch (nome) -> criar nova branch // "staging" é utilizado regularmente para nomear as branch's de teste 
+
+git checkout (nome branch) -> mudar de branch 
+
+git merge (nome da branch com os commit's desejados) -> faz o processo de merge da branch desejada para a atual
+
+git pull -> puxar as ultimas commits feitas na branch 
+
+git checkout -b (nome da nova branch) (nome da branch usada de referência) -> cria uma branch e ja muda para ela 
+
+touch .gitignore -> cria o arquivo gitignore, depois só entrar no mesmo e escrever o nome dos aquivos e extenção ou pastas seguidos de "/" que não devem ser enviados.
+
+
+
+// MERGE // 
+
+Procedimento padrão para adicionar commit's de uma branch para outra:
+
+1 - Entrar na branch master (ou a desejada) 
+
+2 - git pull -> puxar as ultimas commits feitas na branch 
+
+3 - git merge (nome da branch com os commit's desejados) -> faz o processo de merge da branch desejada para a atual 
+
+4 - git push -> para subir as alterações 
+
+///////////
+
+
+// PADRÃO DE MERCADO // 
+
+1 - git pull -> da branch principal 
+
+2 - Gerar uma nova branch a partir da branch principal 
+
+3 - Trabalhar e adicionar novas funcionalidades da nova branch que criou 
+
+4 - Finalizar o Trabalho na branch temporária 
+
+5 - git checkout -> na branch principal 
+
+6 - git pull -> puxar os ultimos commits 
+
+7 - git merge (nome da branch com os commit's desejados) -> Mergiar (unir) o código da branch temporário com a branch principal(depois de testar)
+
+8 - git push -> da branch principal 
+
+///////////
+
+
+// PULL REQUEST (Merge Democrático) // 
+
+1 - git push -> mandar todas as atualizações para nuvem 
+
+2 - Entrar no repositório do Github 
+
+3 - teste-pratica-mercado had recent pushes 1 minute ago -> clicar em "compare & pull request"
+
+4 - selecionar o merge e o destino 
+
+5 - Comentar as atualizações 
+
+6 - Verificar as revisão de outros dev's e se necessário criar nova commit com as correções comentadas marcando os dev's
 
