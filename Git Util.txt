@@ -14,5 +14,6 @@ git remote add origin -> definir o repositorio salvo no Github
 
 git push --set-upstream origin master -> subir pra branch MASTER
 
+git reflog -> historico de modificações 
 
 
